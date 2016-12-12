@@ -1,0 +1,484 @@
+/*
+$ZZZZZZZZZZ.
+$ZZZZZZZZZZZZZ      .,I$Z$+.
+  Z$ZZZ$ZZZZZZ$+..7ZZZZZZZZZZZ
+        ~$ZZZZ$$$ZZ$ZZZZZZZZZZZ
+           ZZ$ZZZZZZZZZZ$Z$Z$7    ?ZZZZZZ$ZZ,   $ZZZZZZZZZ$        :$$Z   +$$$$$$$$$    Z$$$$$$$Z:  $$$$$$$$$$$$$$,  I$$$$$$$$?    $$Z      7$$+        $$$  ,$$$$$$$$$$  $$$$$$$$$$$$$$
+            7ZZZZZZZZ              ,,:::?$ZZZI. ZZZ     =$ZZ       ZZZ   Z$$$Z+       :$$$$I:+$$$$7    ~::$$$~      $7$$$+=ZZ$$$   $$Z      ,$$$       ,$$$  $$$I              +$$7
+             ZZZZZZ?                       ZZZ, ZZZ      $$Z$     ZZZ=  I$$$          $$$~      $$$=      $$$      $$$7      $$$$  $$$       $$$$     ~$$$:  $$$.              =$$7
+             ?ZZZZZ                $Z.     ,ZZZ ZZ$ZZZ$$, ZZZ=   ZZZZ   7$$          I$$$        $$$      $$$      $$$        $$$  $$$        $$$$$$$$$$$=   $$$$$$$Z=.        =$$7
+             =$$ZZZ               ?ZZ7.    .ZZZ ZZZZZZZZ   ZZZ  IZZZ    $$$          7$$:  =$$$$$$$$      $$$      $$$   $$$$$7$$  $$$          7$$$$$$~      +$$$$$$$$:       =$$7
+             $ZZZZ$               +ZZ7     ZZZ? ZZZ         $ZZ,$Z$     7$$+         7$$:  Z$$$$$$$$      $$$      $$$  =$$$$$$$$  $$$            $$$               ,$$$       =$$7
+             ZZZZZZZ              +Z$7   ,Z$ZZ  ZZ$         +$ZZZZ       $$$7.       7$$:        $$$      $$$      $$$        $$$  $$$.           Z$$               ,$$$       =$$7
+           :$ZZZZZZZZZZ+~IZZ$:    ?ZZZZZZZZ$+   ZZZZZZZZZZ   IZ$Z~  ZZZ   $$$$$$$$$$ 7$$:        $$$      $77      $$Z        $$$  $$$$$$$$$$$?   $$$        $$$$$$$$$$,       =$$7
+        .,Z$Z$ZZZZZZZZ$ZZ$$ZZZ7    ZZZZZZZ`     $ZZZZZZZZZ    Z$7   ~Z?.    =$$$$$$$ ,$$         7$I      $$=      $$,        :$$  $$$$$$$$$$$    :$$        $$$$$$$$I.        .Z$.
+  ,I$$ZZZ$ZZZZ$Z.~Z$ZZZZZZZZZZZ
+,$ZZZZZZZZZZZZ?`    $$ZZ$$$Z~
+ZZZZZZZZ$Z$O,
+ ZZZZ$$Z$=
+*/
+
+/***********************************
+GENERAL
+***********************************/
+
+body {
+background-color:#f0f0f0;
+}
+
+.body {
+background-color:#f0f0f0;
+border-top:2px solid #e80909;
+margin-top:300px;
+width:100%;
+}
+
+.content {
+font-family:"Open Sans";
+padding:30px 0 80px;
+text-align:center;
+width:100%;
+}
+
+.pagetitle {
+color:#53585a;
+font-family:Raleway;
+padding-bottom:40px;
+text-align:center;
+}
+
+p {
+color:#707070;
+font-family:"Open Sans";
+font-size:1rem;
+}
+
+a {
+color:#484848;
+text-decoration:none;
+transition:.5s;
+}
+
+a:hover {
+color:#e80909;
+text-decoration:underline;
+}
+
+h3 {
+color:#555;
+}
+
+::selection {
+background-color:#e80909;
+color:#fff;
+}
+
+
+
+/***********************************
+NAVIGATION
+***********************************/
+
+header {
+background-color:#fff;
+box-shadow:0 0 1px rgba(34,25,25,0.4);
+clear:both;
+display:inline-block;
+height:105px;
+position:fixed;
+top:0;
+width:100%;
+z-index:1;
+}
+
+/* logo */
+#logo {
+float:left;
+padding-left:10px;
+position:absolute;
+top:0;
+width:33%;
+z-index:-1;
+}
+
+/* navigation links */
+nav {
+background:#fff;
+float:right;
+padding-right:10px;
+}
+
+nav ul {
+padding:20px 0;
+}
+
+nav ul li {
+display:inline;
+list-style:none;
+}
+
+nav ul li a {
+color:#aaa;
+font-family:"Raleway";
+font-size:1.5em;
+margin:5px;
+padding:5px;
+text-decoration:none;
+}
+
+nav ul li a,nav ul li a:after,nav ul li a:before {
+transition:all .5s;
+}
+
+nav ul li a:hover {
+color:#555;
+text-decoration:none;
+}
+
+nav.shift ul li a {
+position:relative;
+z-index:1;
+}
+
+nav.shift ul li a:after {
+background:#e80909;
+bottom:0;
+color:transparent;
+content:'.';
+display:block;
+height:1px;
+left:0;
+opacity:0;
+position:absolute;
+right:0;
+top:0;
+z-index:-1;
+}
+
+nav.shift ul li a:hover {
+color:#ac0e0e;
+}
+
+nav.shift ul li a:hover:after {
+height:100%;
+opacity:1;
+visibility:visible;
+}
+
+#menu {
+z-index:1;
+}
+
+
+
+/***********************************
+FOOTER
+***********************************/
+
+footer {
+background:#53585a;
+bottom:0;
+border-top:2px solid #e80909;
+color:#FFF;
+display:inline-block;
+font-family:"Open Sans";
+height:375px;
+left:0;
+position:relative;
+right:0;
+width:100%;
+}
+
+.footer-bottom {
+background:#53585a;
+bottom:0;
+display:block;
+margin:20px auto 0;
+width:100%;
+}
+
+.footer-top {
+display:block;
+margin:0 auto 10px;
+padding-top:15px;
+width:100%;
+}
+
+/* map */
+.footer-map {
+display:inline;
+float:left;
+margin:0;
+width:50%;
+padding:10px 50px;
+}
+
+iframe {
+height:250px;
+width:100%;
+}
+
+/* contact information and address */
+.footer-contact {
+display:table;
+float:left;
+padding-left:10px;
+text-align:left;
+width:60%;
+}
+
+.footer-contact a {
+color:#fff;
+font-family:"Open Sans";
+}
+
+.footer-text {
+float:left;
+padding-left:20px;
+}
+
+.footer-text h3 {
+color:#aaa;
+}
+
+.footer-text p {
+color:#fff;
+}
+
+.footer-text p a {
+color:#d3d3d3;
+}
+
+/* social media icons */
+.footer-icons {
+display:inline;
+float:left;
+margin-top:210px;
+padding-left:40px;
+text-align:center;
+width:30%;
+}
+
+.fa,
+.fa:before,
+.fa:hover {
+color:#fff;
+font-size:30px;
+text-align:center;
+width:30px;
+}
+
+.fa-facebook,
+.fa-instagram,
+.fa-twitter,.fa-youtube,
+.fa-snapchat-ghost,
+.fa-github {
+background-color:#322f30;
+padding:14px;
+text-align:center;
+transition:.5s;
+}
+
+.fa-facebook:hover {
+background-color:#3d5b99;
+}
+
+.fa-instagram:hover {
+background-color:#e1306c;
+}
+
+.fa-twitter:hover {
+background-color:#00aced;
+}
+
+.fa-youtube:hover {
+background-color:#e64a41;
+}
+
+.fa-snapchat-ghost:hover {
+background-color:#fffc00;
+}
+
+.fa-github:hover {
+background-color:#767676;
+}
+
+/* copyright */
+.footer-copyright p,
+.footer-copyright h3 {
+border-top:2px solid #fff;
+clear:both;
+color:#fff;
+display:block;
+margin:0 auto;
+padding-top:30px;
+text-align:center;
+width:90%;
+}
+
+.credit {
+color:#d3d3d3;
+}
+
+
+
+/***********************************
+PAGE: HOME
+***********************************/
+
+body {
+background-attachment:fixed;
+background-image:url(../img/background.jpg);
+background-position:top center;
+background-repeat:no-repeat;
+background-size:cover;
+}
+
+.homebox1 {
+display:block;
+float:left;
+width:33.33%;
+}
+
+.homebox2 {
+display:inline-block;
+width:33.33%;
+}
+
+.homebox3 {
+display:block;
+float:right;
+width:33.33%;
+}
+
+.homebox-img {
+display:block;
+margin:0 auto;
+width:90%;
+}
+
+.home-img {
+width:100%;
+}
+
+.homebox-text {
+color:#707070;
+display:block;
+font-family:"Open Sans";
+font-size:.9rem;
+margin:0 auto;
+text-align:left;
+width:90%;
+}
+
+
+
+/***********************************
+PAGE: UPCOMING EVENTS
+***********************************/
+
+.eventbox {
+display:block;
+float:left;
+height:30%;
+text-align:center;
+width:50%;
+}
+
+.eventbox-top {
+display:block;
+height:100%;
+margin:0 auto;
+position:relative;
+width:80%;
+}
+
+.eventbox-bottom {
+margin:0 auto;
+padding-bottom:100px;
+text-align:left;
+width:80%;
+}
+
+.eventbox-top img {
+width:100%;
+}
+
+.eventbox-top iframe {
+height:20%;
+width:100%;
+}
+
+
+
+/***********************************
+PAGE: GALLERY
+***********************************/
+
+.gallery {
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+list-style:none;
+width:100%;
+}
+
+.gallery-item {
+padding:5px;
+}
+
+
+
+/***********************************
+PAGE: MEMBERS
+***********************************/
+.memberslist {
+column-count:3;
+}
+
+.members-footnote {
+padding:30px 0 30px 5%;
+text-align:left;
+}
+
+
+/***********************************
+PAGE: JOIN
+***********************************/
+
+
+
+/***********************************
+PAGE: ABOUT
+***********************************/
+
+.aboutimg {
+display:inline-block;
+text-align:center;
+width:40%;
+}
+
+.aboutimg img {
+width:100%;
+}
+
+
+/***********************************
+COLORS
+***********************************/
+/*
+regular red
+#e80909
+dark red
+#ac0e0e
+
+lighest gray
+#fff
+#f0f0f0
+#d3d3d3
+#aaaaaa
+#707070
+#555555
+#322f30
+darkest gray
+*/
